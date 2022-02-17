@@ -1,0 +1,8 @@
+matplotlib
+seaborn
+numpy
+pandas
+Cartopy
+xarray
+scikit-learn
+ecmwf-api-client

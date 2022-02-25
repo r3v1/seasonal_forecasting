@@ -79,7 +79,8 @@ if __name__ == "__main__":
 
     # Target domains
     # areas=('europe' 'scandi' 'easeur' 'westeu' 'meditr')
-    area = 'europe'
+    # area = 'europe'
+    area = 'spain'
 
     # Experiment
     # Possible values: 'CONTROL', 'INCLPERSIS', 'SKIPQMAP', 'DETREND', 'NO_LAGS', 'CUTFIRSTYRS', 'SINGLE', 'WEIGHTING', 'FOLLAND'

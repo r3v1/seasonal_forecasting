@@ -598,6 +598,8 @@ def read_and_select(fles, var, area):
         ds = ds.squeeze().sel(lat=slice(-10, 87))
     elif (area == 'norpol'):
         ds = ds.squeeze().sel(lat=slice(50, 87))
+    elif area == "spain":
+        ds = ds.squeeze().sel(lat=slice(-10, 5), lon=slice(35, 45))
     else:
         ds = ds.squeeze()
 

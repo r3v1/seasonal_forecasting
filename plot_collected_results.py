@@ -210,7 +210,7 @@ def main(y_var, area, exp, src, in_dir, out_dir):
 
 if __name__ == "__main__":
     # Target variable
-    y_var = 'T2M'
+    y_var = 'precip'
 
     # Target domains
     # areas=('europe' 'scandi' 'easeur' 'westeu' 'meditr')

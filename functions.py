@@ -482,6 +482,7 @@ def read_manipulate_Y_data(y_var, in_dir: Path, predef_clim, predef_trnd, trn_yr
         # 'T2M':['t2m','te2m_era20c_monthly_1900-2010.nc']
         # 'T2M':['air','air.2m.mon.mean.nc'],
         'T2M': ['temperature_anomaly', 'HadCRUT.4.6.0.0.median.nc'],
+        'precip': ["precip", "precip.mon.total.1x1.v7.nc"]
     }
 
     y_eur = read_and_select(in_dir / name2code[y_var][1], name2code[y_var][0], y_area)
@@ -584,6 +585,7 @@ def read_and_select(fles, var, area):
         mask = ds[var].values == -1000.
         ds[var].values[mask] = np.nan
 
+    ds = ds.sortby(["lat", "lon"])
     if (area == 'europe'):
         ds = ds.squeeze().sel(lat=slice(33, 73), lon=slice(-12, 40))
     elif (area == 'westeu'):
